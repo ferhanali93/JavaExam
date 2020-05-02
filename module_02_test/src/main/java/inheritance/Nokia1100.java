@@ -3,6 +3,7 @@ package inheritance;
 public class Nokia1100  extends PreNokia1100 {
 
    PreNokia1100 p1100;
+
    /**
     * Make necessary changes to inherit PreNokia1100
     * Declare and assign value to a String instance variable called nameOfTheClass
@@ -12,12 +13,12 @@ public class Nokia1100  extends PreNokia1100 {
 
 
    public void display() {
-      System.out.println("the sky is big and blue");
+      System.out.println("It is raining");
       p1100.sendText();
    }
 
 
    public void makeCall() {
-      System.out.println("dialing number now");
+      System.out.println("Making a call now");
    }
 }
