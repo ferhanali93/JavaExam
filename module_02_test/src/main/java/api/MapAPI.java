@@ -1,13 +1,16 @@
 package api;
-
+import java.util.HashMap;
 public class MapAPI {
-    /**
-     * @author Jahiudl Islam
-     * Read Map and HashMap JDK 8 API documantation to be read and Map and HashMap source code to be viewed
-     * Demonastrate your understanding on Map and HashMap after reading the documentation
-     * You are free to document your understanding using comment
-     * Reason to comment is to keep documentation so that next developer can get highlevel understaning of your implementation
-     * by reading your comments/documents
-     *
-     * */
+
+    public static void main(String[] args) {
+        HashMap<String, Integer> empID = new HashMap<String, Integer>(); // Created HashMap
+        empID.put("Ferhan", 250); // added --> Key and values
+        empID.put("Navid", 251);
+        empID.put("Michael", 252);
+        empID.put("Eashan", 253);
+        empID.put("Kamrun", 254);
+        System.out.println(empID.containsValue("jahidul")); // r
+
+    }
+
 }

@@ -1,18 +1,33 @@
 package problems;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class FibonacciSeries {
     public static void main(String[] args) {
-        fibonacciSeries(100);
+         /*
+          Write 40 Fibonacci numbers with java.
+         */
+        int fab[] = new int[40];
+        System.out.println(arrayFibo(fab));
     }
 
-    private static void fibonacciSeries(int n) {
+    public static ArrayList<Integer> arrayFibo(int fab[]){
 
-    /**
-     * Write a function to find fibonacciSerie of 100
-     * */
+        ArrayList<Integer> ar = new ArrayList<>();
+
+        for (int m = 0; m < fab.length; m++) {
+            if (m < 2) {
+                fab[m] = m;
+                ar.add(fab[m]);
+
+            } else {
+                fab[m] = fab[m - 2] + fab[m - 1];
+                ar.add(fab[m]);
+            }
+        }
+
+        return ar;
     }
 
 }

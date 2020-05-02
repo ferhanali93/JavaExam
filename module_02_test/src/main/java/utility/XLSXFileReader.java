@@ -1,33 +1,31 @@
 package utility;
 
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 import java.io.FileInputStream;
 
 public class XLSXFileReader {
-	
+
 	protected XSSFSheet excelWSheet;
 	protected XSSFWorkbook excelWBook;
 	protected XSSFCell cell;
 	protected XSSFRow row;
 
-	
+
 	public void setExcelFile(String Path) throws Exception {
-		 
-			try {
+
+		try {
 			FileInputStream ExcelFile = new FileInputStream(Path);
 			excelWBook = new XSSFWorkbook(ExcelFile);
 			///ExcelWSheet = ExcelWBook.getSheet(SheetName);
-			} catch (Exception e){
-				throw (e);
-			}
+		} catch (Exception e){
+			throw (e);
+		}
 
 	}// end of setexcelfile
-	
+
 	@SuppressWarnings("null")
 	public String[][] getExcelSheetData(String sheetname) throws Exception {
 		String[][] data = null;
@@ -49,20 +47,19 @@ public class XLSXFileReader {
 						String cellData = cell.getStringCellValue();
 						data[i][j] = cellData;
 					}
-					}
-					// copied array to get rid of header row
-					for(int m=0; m<rows; m++){
-						for (int n=0; n<cols; n++){
-							mydata[m][n] = data[m+1][n];
-
-						}
-					}
-
 				}
-			}
-			
-			return mydata;
-		} //// end of getexcel sheet data
+				// copied array to get rid of header row
+				for(int m=0; m<rows; m++){
+					for (int n=0; n<cols; n++){
+						mydata[m][n] = data[m+1][n];
 
+					}
+				}
+
+			}
+		}
+
+		return mydata;
+	} //// end of getexcel sheet data
 
 } // end of class

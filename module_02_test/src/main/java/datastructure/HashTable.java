@@ -1,9 +1,16 @@
 package datastructure;
 
-public class HashTable {
+import java.util.Hashtable;
 
-    /**
-     * SHow your understanding on HashTable
-     * Use some methods from HashTable Class
-     * */
+public class HashTable {
+    public static void main(String[] args) {
+        Hashtable<String, String> students = new Hashtable<String, String>();
+        students.put("Michael", "QA");
+        students.put("Navid", "QA");
+        students.put("Eashan", "QA");
+        students.put("Kawsar", "QA");
+        students.replace("Michael", "OG");
+        System.out.println(students);
+    }
+
 }

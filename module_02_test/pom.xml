@@ -23,7 +23,19 @@
         <artifactId>poi-ooxml</artifactId>
         <version>3.17</version>
      </dependency>
-    </dependencies>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.47</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.monitorjbl/xlsx-streamer -->
+        <dependency>
+            <groupId>com.monitorjbl</groupId>
+            <artifactId>xlsx-streamer</artifactId>
+            <version>0.2.9</version>
+        </dependency>
 
+    </dependencies>
 
 </project>

@@ -11,7 +11,5 @@ public class UseMap {
 		 * You can use any other retrieval process
 		 * Use any databases[ MySql] to store data and retrieve data.
 		 */
-
 	}
-
 }
